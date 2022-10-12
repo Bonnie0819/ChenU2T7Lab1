@@ -32,8 +32,9 @@ public class MainRunner {
                 System.out.println(str2 + " is longer");
             }
         }
+
         //checks for same sequence of characters
-        if(str1.compareTo(str2) == 0) {
+        if(str1.equals(str2) ) {
             System.out.println("Both strings have the exact same characters");
         } else {
             if (str1.compareTo(str2) > 0) {
@@ -41,6 +42,14 @@ public class MainRunner {
             } else {
                 System.out.println(str2 + " is first alphabetically");
             }
+        }
+
+        //if the second string is found in the first string
+        int foundOrNot = str1.indexOf(str2);
+        if( foundOrNot == -1) {
+            System.out.println(str2 + " is NOT found in " + str1);
+        } else {
+            System.out.println(str2 + " is found in " + str1 + " at " + foundOrNot);
         }
 
 
